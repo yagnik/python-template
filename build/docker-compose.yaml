@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: build/Dockerfile
+    volumes:
+      - ..:/opt/project
+    working_dir: /opt/project
+    command: tail -f /dev/null

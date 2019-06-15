@@ -5,10 +5,14 @@ verify_ssl = true
 
 [dev-packages]
 python-language-server = {extras = ["all"],version = "*"}
-pyls-isort = "*"
+pyls-isort = "==0.1.1"
+sphinx = "==2.1.1"
+pyls-mypy = "==0.1.6"
+pytest = "==4.6.3"
+# black
+# mypy
 
 [requires]
 python_version = "3.7"
 
 [packages]
-pyls-mypy = "*"
