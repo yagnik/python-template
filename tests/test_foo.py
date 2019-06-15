@@ -1,11 +1,5 @@
-"""
-  doc string
-"""
+from app import foo
 
 
 def test_foo():
-    """
-    doc string
-    """
-    assert True
-
+    assert foo.bar(1) == 2

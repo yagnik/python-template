@@ -4,15 +4,21 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-python-language-server = {extras = ["all"],version = "*"}
-pyls-isort = "==0.1.1"
 sphinx = "==2.1.1"
-pyls-mypy = "==0.1.6"
+mypy = "*"
+black = "*"
+flake8 = "*"
+flake8-mypy = "*"
+flake8-black = "*"
 pytest = "==4.6.3"
-# black
-# mypy
+pytest-flake8 = "*"
+pytest-cov = "*"
+
 
 [requires]
 python_version = "3.7"
 
 [packages]
+
+[pipenv]
+allow_prereleases = true
