@@ -5,7 +5,7 @@ setup: ## setup python dependencies
 	pipenv install --dev --deploy
 
 test: ## run app tests
-	pipenv run pytest --doctest-modules --cov=app/ --flake8 -v -p no:cacheprovider
+	pipenv run pytest --docstyle --doctest-modules --cov=app/ --flake8 -v
 
 shell: docker-start
 	docker-compose -f build/docker-compose.yaml exec app pipenv shell

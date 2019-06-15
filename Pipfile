@@ -5,15 +5,17 @@ verify_ssl = true
 
 [dev-packages]
 sphinx = "==2.1.1"
+hypothesis = "*"
 mypy = "*"
 black = "*"
+pydocstyle = "*"
 flake8 = "*"
 flake8-mypy = "*"
 flake8-black = "*"
 pytest = "==4.6.3"
 pytest-flake8 = "*"
 pytest-cov = "*"
-
+pytest-docstyle = "*"
 
 [requires]
 python_version = "3.7"

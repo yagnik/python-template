@@ -17,14 +17,13 @@ TODO:
 - [x] static type checking enforcement
 - [x] code coverage
 - [x] unit test with pytest
-- [x] doctest support
-- [ ] mock test example
-- [ ] hypothesis support
-- [ ] contract test example
+- [x] doctest support ( not using flake8 plugin cause it includes test files no matter what I do)
+- [x] mock test example
+- [x] hypothesis support
 - [ ] auto generated docs
+- [ ] contract test example
 - [ ] logging
 - [ ] metrics/tracing
-- [ ] named params enforcement
 
 
 
