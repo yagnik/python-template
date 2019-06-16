@@ -7,12 +7,11 @@ Things I want:
 
 
 TODO:
-- [ ] basic layout
+- [x] basic layout
 - [ ] setup.py, license, readme
 - [x] support for make file
 - [x] pipenv support
 - [x] support for docker enviroment
-- [ ] support for pycharm ( python language server with docker is too much pain )
 - [x] code format + linting
 - [x] static type checking enforcement
 - [x] code coverage
@@ -21,9 +20,9 @@ TODO:
 - [x] mock test example
 - [x] hypothesis support
 - [ ] auto generated docs
-- [ ] contract test example
 - [ ] logging
-- [ ] metrics/tracing
-
+- [ ] metrics
+- [ ] contract test example
+- [ ] support for pycharm ( python language server with docker is too much pain )
 
 

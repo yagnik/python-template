@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "900c7c5896aa37592badf43ef6047def9c6fa4157434e456873f1f7e9b286333"
+            "sha256": "4fe8e9fe6c9a39875458048da5836926cd0d8c740cf16c360e7998f23ec371d7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "app": {
+            "editable": true,
+            "path": "."
+        }
+    },
     "develop": {
         "alabaster": {
             "hashes": [
