@@ -20,10 +20,9 @@ TODO:
 - [x] mock test example
 - [x] hypothesis support
 - [ ] auto generated docs
+- [x] metrics
 - [x] config
 - [x] logging
-- [ ] add file and size rotation for logs
-- [ ] metrics
 - [ ] contract test example
 - [ ] support for pycharm ( python language server with docker is too much pain )
 
