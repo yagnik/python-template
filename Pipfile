@@ -21,6 +21,7 @@ pytest-docstyle = "*"
 python_version = "3.7"
 
 [packages]
+prometheus-client = "*"
 
 [pipenv]
 allow_prereleases = true
