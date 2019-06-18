@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+    "formatters": {
+        "simple": {
+            "format": "[%(levelname)s][%(name)s][%(asctime)s]\t -- %(processName)s %(filename)s:%(lineno)s -- %(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "simple"
+        }
+    },
+    "loggers": {
+        "": {
+            "level": "DEBUG",
+            "handlers": ["console"]
+        }
+    }
+}

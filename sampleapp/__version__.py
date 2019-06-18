@@ -1,7 +1,7 @@
 """
-this is public app.
+this is sample app version.
 
-yet another detail
+the version is listed below
 """
 
 

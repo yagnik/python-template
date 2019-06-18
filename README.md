@@ -8,7 +8,7 @@ Things I want:
 
 TODO:
 - [x] basic layout
-- [ ] setup.py, license, readme
+- [x] setup.py, license, readme
 - [x] support for make file
 - [x] pipenv support
 - [x] support for docker enviroment
@@ -20,6 +20,7 @@ TODO:
 - [x] mock test example
 - [x] hypothesis support
 - [ ] auto generated docs
+- [x] config
 - [ ] logging
 - [ ] metrics
 - [ ] contract test example
