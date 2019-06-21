@@ -19,7 +19,7 @@ TODO:
 - [x] doctest support ( not using flake8 plugin cause it includes test files no matter what I do)
 - [x] mock test example
 - [x] hypothesis support
-- [ ] auto generated docs
+- [x] auto generated docs
 - [x] metrics
 - [x] config
 - [x] logging
