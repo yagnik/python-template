@@ -23,7 +23,3 @@ TODO:
 - [x] metrics
 - [x] config
 - [x] logging
-- [ ] contract test example
-- [ ] support for pycharm ( python language server with docker is too much pain )
-
-
