@@ -2,13 +2,13 @@ help: ## display this help screen
 	grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 setup: ## setup python dependencies
-	pipenv install --dev --deploy
+	poetry install
 
 test: ## run app tests
-	pipenv run pytest --docstyle --doctest-modules --cov=sampleapp/ --flake8 -v
+	poetry run pytest --doctest-modules --cov=sampleapp/ --flake8 -v
 
 shell: docker-start
-	docker-compose -f build/docker-compose.yaml exec sampleapp pipenv shell
+	docker-compose -f build/docker-compose.yaml exec sampleapp poetry shell
 
 docker-compose:
 	@docker-compose version
