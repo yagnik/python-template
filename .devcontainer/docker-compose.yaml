@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  sampleapp:
+  template:
     build:
       context: ../
-      dockerfile: build/Dockerfile
+      dockerfile: .devcontainer/Dockerfile
     volumes:
       - ..:/opt/project
     working_dir: /opt/project

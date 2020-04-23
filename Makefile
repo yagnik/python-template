@@ -1,30 +1,37 @@
+define with_docker
+	docker-compose -p server_devcontainer -f .devcontainer/docker-compose.yaml $(1)
+endef
+
 help: ## display this help screen
 	grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 setup: ## setup python dependencies
-	poetry install
+	poetry install --no-root
 
 test: ## run app tests
-	poetry run pytest --doctest-modules --cov=sampleapp/ --flake8 -v
+	poetry run pytest
 
-shell: docker-start
-	docker-compose -f build/docker-compose.yaml exec sampleapp poetry shell
+test-html: ## run app tests with http coverage report
+	poetry run pytest  --cov-report=html:tmp/htmlcov
+
+shell: docker-start ## get in shell where app
+	$(call with_docker, exec template poetry run /bin/bash)
 
 docker-compose:
 	@docker-compose version
 
 docker-start: docker-compose
-	docker-compose -f build/docker-compose.yaml up -d
+	$(call with_docker, up -d)
 
 docker-clean: docker-compose
-	docker-compose -f build/docker-compose.yaml down
-	docker-compose -f build/docker-compose.yaml rm
+	$(call with_docker, down)
+	$(call with_docker, rm)
 
 docker-rebuild: docker-compose ## rebuild docker containers of the project
-	docker-compose -f build/docker-compose.yaml build
+	$(call with_docker, build)
 
 docker-setup: docker-start ## setup salt with docker containers for testing
-	docker-compose -f build/docker-compose.yaml exec sampleapp make setup
+	$(call with_docker, exec template make setup)
 
 docker-test: docker-setup ## run salt tests inside container
-	docker-compose -f build/docker-compose.yaml exec sampleapp make test
+	$(call with_docker, exec template make test)

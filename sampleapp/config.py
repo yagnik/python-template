@@ -19,9 +19,7 @@ class Config(object):
 
     def __init__(self) -> None:
         """Construct Config class."""
-        self.config_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "config"
-        )
+        self.config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "config")
         self.log_config_path = os.path.join(self.config_path, self.LOG_CONFIG_FILE)
         self.app_config_path = os.path.join(self.config_path, self.APP_CONFIG_FILE)
         self.log_config: dict = {}

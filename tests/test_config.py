@@ -6,9 +6,7 @@ from sampleapp import config
 
 @pytest.fixture
 def config_path():
-    return os.path.join(
-        os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "config"
-    )
+    return os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "config")
 
 
 def test_config_constructor_sets_paths(config_path):
